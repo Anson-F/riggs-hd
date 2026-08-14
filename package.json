@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "postbuild": "node scripts/inject-contract.mjs",
+    "check:export-links": "node scripts/check-export-links.mjs",
+    "qa:live": "python3 scripts/qa_live_navigation.py",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { HomeHero } from "@/components/home-hero";
 import { ButtonLink } from "@/components/button-link";
 import { programs } from "@/data/site";
-import { assetPath } from "@/lib/assets";
+import { assetPath, sitePath } from "@/lib/assets";
 
 export default function HomePage() {
   return (
@@ -32,7 +32,7 @@ export default function HomePage() {
         </div>
         <div className="program-index__list">
           {programs.slice(0, 3).map((program) => (
-            <a className="program-index__row" href={`/programs#${program.id}`} key={program.id}>
+            <a className="program-index__row" href={sitePath(`/programs/#${program.id}`)} key={program.id}>
               <span className="program-index__number">{program.index}</span>
               <div>
                 <span className="program-index__marker">{program.marker}</span>
