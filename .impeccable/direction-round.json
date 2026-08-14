@@ -1,0 +1,145 @@
+{
+  "title": "Choose the Riggs HD visual world",
+  "question": "Pick the design world for the rebuild, choose a strong alternate, or ask for a fresh hand.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Locker Room → Lecture Hall",
+      "kicker": "THE ROLL",
+      "lineage": "gym thresholds, athlete pathway boards, and college advising folders",
+      "thesis": "One physical path carries a student from sport into relationship, guidance, opportunity, and future.",
+      "palette": ["#0B1B35", "#1746C6", "#F2EDE2", "#E9A23B"],
+      "materials": ["court lacquer", "advising folders", "taped photographs", "whiteboard ink"],
+      "viewport": "A real gym photograph opens on the left; a court line crosses a central threshold into a structured future-path dossier on the right.",
+      "risk": "The gym-to-campus transition must feel like one lived journey, not a literal before-and-after collage.",
+      "raised": [
+        {
+          "from": "Glazier partition",
+          "raise": "Each stage owns one bounded room, and saturated color appears only at the active decision."
+        },
+        {
+          "from": "Pickling calendar",
+          "raise": "The pathway visibly matures across stages instead of functioning as a decorative arrow."
+        },
+        {
+          "from": "Variable type specimen",
+          "raise": "Display type and microtype use uncompromising scale contrast so the story reads in seconds."
+        },
+        {
+          "from": "Plate-book ornament",
+          "raise": "Court and advising geometry repeat as whole units and lock cleanly at every breakpoint."
+        }
+      ],
+      "sketch": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Sideline-to-Study-Hall Field Guide",
+      "kicker": "MY PICK",
+      "lineage": "coach playbooks, scouting notes, and student advising workbooks",
+      "thesis": "The site becomes the field guide a young athlete carries from first drill to first opportunity.",
+      "palette": ["#102A43", "#2455D6", "#F6F0E5", "#F28C28"],
+      "materials": ["clipboard paper", "pencil notation", "court diagrams", "document tabs"],
+      "viewport": "A large real team photograph is annotated like a working playbook, while one folded guide edge reveals the five-stage future pathway.",
+      "risk": "It is the most familiar direction for this exact sports-plus-advising story and could become predictable if the document craft is weak.",
+      "sketch": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-split-flap",
+      "label": "Future Departures Board",
+      "verdict": "competitive",
+      "lineage": "rail-concourse split-flap boards and fixed-cell status systems",
+      "thesis": "Programs and next steps become a live departures board for futures already in motion.",
+      "palette": ["#0B0B0D", "#2A2D31", "#F2F2F2", "#FFB000", "#B00020"],
+      "materials": ["matte flap faces", "brushed steel", "painted letters", "amber row lamps"],
+      "viewport": "The five-stage pathway fills a black split-flap board above a real gym concourse image, with current program statuses in fixed columns.",
+      "case": "It matches program and event clarity exceptionally well, but its transit language is less emotionally native to students and families.",
+      "risk": "Too much mechanical motion or black density could make a youth nonprofit feel cold.",
+      "sketch": ".impeccable/mocks/decision/challenger-split-flap.webp",
+      "hero": ".impeccable/reference/split-flap-hero.webp",
+      "board": ".impeccable/reference/split-flap-board.webp"
+    },
+    {
+      "id": "challenger-viewfinder",
+      "label": "Game Film Viewfinder",
+      "verdict": "competitive",
+      "lineage": "camcorder viewfinders, game-film review, and focus brackets",
+      "thesis": "Real program moments stay full-bleed while the interface focuses each next decision in a young person's story.",
+      "palette": ["#050505", "#FFFFFF", "#FFB000", "#2A2F33"],
+      "materials": ["OSD ink", "letterbox black", "focus brackets", "zebra caution stripes"],
+      "viewport": "The program reel fills the frame; focus brackets settle on students and reveal the pathway, programs, and next action as viewfinder readouts.",
+      "case": "It gives the real media urgency and youth recognition, but it is less natural for long-form program and donation information.",
+      "risk": "The interface could feel like a film product instead of a trusted community organization.",
+      "sketch": ".impeccable/mocks/decision/challenger-viewfinder.webp",
+      "hero": ".impeccable/reference/viewfinder-hero.webp",
+      "board": ".impeccable/reference/viewfinder-board.webp"
+    },
+    {
+      "id": "challenger-glazier",
+      "label": "Colorfield Guidance Wall",
+      "verdict": "declined",
+      "lineage": "steel-framed glass workshop partitions",
+      "thesis": "The mission is arranged as transparent rooms of sport, guidance, and future opportunity.",
+      "palette": ["#0A0A0A", "#F3F0E8", "#1848C7", "#D9892B"],
+      "materials": ["rolled glass", "black mullions", "backlight", "frosted states"],
+      "viewport": "A wall of photographic panes lights one mission stage at a time.",
+      "case": "It loses audience identification and makes the nonprofit mechanism less immediately legible.",
+      "risk": "The architectural metaphor can overpower the people and programs.",
+      "kept": "One room, one statement, one color-coded state."
+    },
+    {
+      "id": "challenger-pickling",
+      "label": "Seasonal Growth Calendar",
+      "verdict": "declined",
+      "lineage": "dated preservation labels and seasonal maturation records",
+      "thesis": "Youth development becomes a visible record of growth over time.",
+      "palette": ["#F4E9D7", "#C94B46", "#3F6D48", "#9B6B43"],
+      "materials": ["label paper", "date stamps", "clear glass", "kraft bands"],
+      "viewport": "The five-stage pathway appears as a seasonal shelf of dated growth records.",
+      "case": "The maturation idea is useful, but the food-world carrier has no credible connection to the audience.",
+      "risk": "It would read whimsical where the organization needs trust.",
+      "kept": "Progress must visibly mature from stage to stage."
+    },
+    {
+      "id": "challenger-variable-type",
+      "label": "Future Type Specimen",
+      "verdict": "declined",
+      "lineage": "interactive variable-font specimens",
+      "thesis": "A young person's future expands from one name into many possible forms.",
+      "palette": ["#F8F5EE", "#101010", "#1C4ED8", "#E69732"],
+      "materials": ["paper white", "ink black", "baseline grid", "axis readouts"],
+      "viewport": "The word FUTURE transforms at giant scale above a strict grid of program proof.",
+      "case": "The type can dramatize possibility, but it identifies neither the basketball entry point nor the service model clearly enough.",
+      "risk": "The system can become a designer showcase instead of a youth-serving organization.",
+      "kept": "Hierarchy is carried by fearless scale contrast, not extra decoration."
+    },
+    {
+      "id": "challenger-plate-book",
+      "label": "Community Pattern Manual",
+      "verdict": "declined",
+      "lineage": "regional ornament plate books and repeatable geometric units",
+      "thesis": "Court lines and educational symbols assemble into one community-owned visual alphabet.",
+      "palette": ["#58606A", "#EFE7D8", "#A84535", "#132B4A"],
+      "materials": ["plate stock", "fine keylines", "numbered units", "flat ink"],
+      "viewport": "A numbered plate of symbols assembles into the Riggs HD pathway around real program photography.",
+      "case": "It can create a durable identity system, but it delays the simple human story visitors need first.",
+      "risk": "The pattern language can feel institutional and distant from real youth.",
+      "kept": "Geometry repeats in whole units and locks at responsive boundaries."
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A polished youth-sports nonprofit site with a full-bleed hero, program tiles, impact metrics, and a prominent donation action.",
+    "palette": ["#FFFFFF", "#12233F", "#2457D6", "#F0A13A"],
+    "materials": ["clean grid", "rounded panels", "sports photography", "simple icons"],
+    "viewport": "A conventional photography hero states the mission with Programs and Donate buttons above a three-card program row.",
+    "risk": "It will be familiar and usable, but visually interchangeable with many youth-sports nonprofits.",
+    "sketch": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true,
+  "followup": true
+}

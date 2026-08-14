@@ -1,0 +1,41 @@
+{
+  "title": "Choose the Riggs HD homepage composition",
+  "question": "The visual world is fixed. Choose which first-viewport structure should become the build law.",
+  "options": [
+    {
+      "id": "option-a",
+      "label": "Layered Dossier",
+      "kicker": "YOUR ORIGINAL PICK",
+      "lineage": "gym panorama overlapped by a student advising file",
+      "thesis": "The gym remains the emotional field while the future dossier physically enters it.",
+      "palette": ["#0B1B35", "#1746C6", "#F2EDE2", "#E9A23B"],
+      "materials": ["court lacquer", "manila folders", "taped photographs", "whiteboard ink"],
+      "viewport": "Grayscale gym left and center, warm dossier in the right foreground, with the amber pathway running across the floor and bottom rail.",
+      "risk": "The overlap is the most ambitious to reproduce responsively without flattening the physical depth.",
+      "sketch": ".impeccable/mocks/home/option-a.png"
+    },
+    {
+      "id": "option-b",
+      "label": "Threshold Doorway",
+      "lineage": "a literal passage from gym floor into advising space",
+      "thesis": "A cobalt doorway makes the transition from sport to future impossible to miss.",
+      "palette": ["#0B1B35", "#1746C6", "#F2EDE2", "#E9A23B"],
+      "materials": ["painted doorway", "court lacquer", "folder stock", "masking tape"],
+      "viewport": "A 45/55 split is joined by a full-height cobalt threshold and one continuous amber floor line.",
+      "risk": "The literal doorway is clearer but gives the program photography less dominance.",
+      "sketch": ".impeccable/mocks/home/option-b.png"
+    },
+    {
+      "id": "option-c",
+      "label": "Open Case File",
+      "lineage": "one horizontal advising case file holding the entire story",
+      "thesis": "The homepage itself becomes the documented pathway from the game into a future plan.",
+      "palette": ["#0B1B35", "#1746C6", "#F2EDE2", "#E9A23B"],
+      "materials": ["open folder", "metal clip", "taped photographs", "ruled advising form"],
+      "viewport": "An oversized open folder spans the screen with verified copy left, real basketball photography right, and five stages across its lower edge.",
+      "risk": "The file metaphor is highly coherent but can feel more academic than athletic if the photo loses scale.",
+      "sketch": ".impeccable/mocks/home/option-c.png"
+    }
+  ],
+  "steer": true
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-14T16:18:43Z",
+  "title": "Design System: Riggs HD",
+  "extensions": {
+    "colorMeta": {
+      "deep-navy": { "role": "neutral", "displayName": "Deep Locker Navy", "canonical": "#031325", "tonalRamp": ["#01060d", "#031325", "#0b2742", "#24435d", "#526a80", "#8798a8", "#bec8d1", "#f0f3f5"] },
+      "raised-navy": { "role": "neutral", "displayName": "Raised Navy", "canonical": "#071c33", "tonalRamp": ["#020910", "#071c33", "#12324e", "#2e4d67", "#5b7185", "#8c9ba9", "#c1c9d0", "#f1f3f5"] },
+      "action-blue": { "role": "primary", "displayName": "Action Cobalt", "canonical": "#0756d8", "tonalRamp": ["#00102f", "#00265e", "#003d94", "#0756d8", "#3f78e4", "#7da2ec", "#b9cef5", "#eef4ff"] },
+      "court-amber": { "role": "secondary", "displayName": "Court Amber", "canonical": "#f3a529", "tonalRamp": ["#2d1900", "#603a00", "#996000", "#cd850f", "#f3a529", "#f6c26c", "#f9dca7", "#fff4df"] },
+      "manila-paper": { "role": "neutral", "displayName": "Advising Manila", "canonical": "#f2ede2", "tonalRamp": ["#28241d", "#4f493d", "#776f60", "#a19888", "#c6beaf", "#ded7ca", "#f2ede2", "#fbf9f4"] },
+      "page-white": { "role": "neutral", "displayName": "Reading White", "canonical": "#fcfaf5", "tonalRamp": ["#282724", "#504f4a", "#787671", "#a19f99", "#c9c6c0", "#e2dfd9", "#fcfaf5", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "hero": { "displayName": "Hero Statement", "purpose": "First-viewport mission statements only." },
+      "display": { "displayName": "Athletic Display", "purpose": "Page and section headings." },
+      "body": { "displayName": "Humanist Body", "purpose": "Narrative and explanatory content." },
+      "data": { "displayName": "Field Data", "purpose": "Status, dates, routes, and measured metadata." },
+      "annotation": { "displayName": "Advising Ink", "purpose": "Short verified notes on physical planning surfaces." }
+    },
+    "shadows": [
+      { "name": "dossier-lift", "value": "-15px 22px 35px rgba(0,0,0,0.28)", "purpose": "Separate a physical advising file from a photographic field." },
+      { "name": "photo-lift", "value": "0 18px 45px rgba(3,19,37,0.18)", "purpose": "Lift a taped field photograph from a reading surface." },
+      { "name": "media-lift", "value": "0 18px 38px rgba(3,19,37,0.24)", "purpose": "Give embedded media soft physical depth." }
+    ],
+    "motion": [
+      { "name": "state-quick", "value": "200ms ease", "purpose": "Hover color, underline, and 2px button lift." },
+      { "name": "image-settle", "value": "500ms ease", "purpose": "Restrained scale change on documentary program images." }
+    ],
+    "breakpoints": [
+      { "name": "wide", "value": "1180px" },
+      { "name": "stack", "value": "900px" },
+      { "name": "mobile", "value": "620px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The cobalt next-step control used for the primary local action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Explore programs<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-btn-primary{min-height:54px;width:fit-content;display:inline-flex;align-items:center;justify-content:center;gap:.7rem;padding:.8rem 1.55rem;background:var(--blue,#0756d8);color:#fcfaf5;border:0;border-radius:0;font:700 1.1rem/1 'Barlow Condensed','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.035em;text-decoration:none;transition:transform .2s ease,background .2s ease}.ds-btn-primary svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}.ds-btn-primary:hover{background:var(--blue-bright,#1266f1);transform:translateY(-2px)}.ds-btn-primary:focus-visible{outline:3px solid var(--amber,#f3a529);outline-offset:4px}"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "description": "A lower-emphasis action that keeps the same compressed voice.",
+      "html": "<a class=\"ds-btn-text\" href=\"#\">View all programs<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-btn-text{display:inline-flex;align-items:center;gap:.7rem;padding:.5rem 0;color:var(--ink,#031325);border-bottom:1px solid currentColor;font:700 1.1rem/1 'Barlow Condensed','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.035em;text-decoration:none;transition:color .2s ease,transform .2s ease}.ds-btn-text svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}.ds-btn-text:hover{color:var(--blue,#0756d8);transform:translateY(-2px)}.ds-btn-text:focus-visible{outline:3px solid var(--amber,#f3a529);outline-offset:4px}"
+    },
+    {
+      "name": "Contact Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A square, explicit field with a separate measured label.",
+      "html": "<label class=\"ds-field\"><span>Email</span><input type=\"email\" placeholder=\"name@example.com\"></label>",
+      "css": ".ds-field{display:grid;gap:.55rem;color:var(--ink,#031325)}.ds-field span{font:400 .67rem/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase}.ds-field input{width:100%;padding:.95rem 1rem;border:1px solid var(--ink,#031325);border-radius:0;background:#fff;color:var(--ink,#031325);font:400 17px/1.55 'Source Sans 3',Arial,sans-serif}.ds-field input:focus-visible{outline:3px solid var(--amber,#f3a529);outline-offset:4px}"
+    },
+    {
+      "name": "Global Navigation",
+      "kind": "nav",
+      "description": "A navy route bar with a full-height cobalt donation action.",
+      "html": "<nav class=\"ds-nav\"><strong>RIGGS <em>HD</em></strong><a href=\"#\">Programs</a><a href=\"#\">Impact</a><a class=\"ds-nav-donate\" href=\"#\">Donate</a></nav>",
+      "css": ".ds-nav{min-height:76px;display:flex;align-items:center;gap:2rem;padding-left:1.5rem;background:var(--ink,#031325);color:#fcfaf5}.ds-nav strong,.ds-nav a{font:700 1.15rem/1 'Barlow Condensed','Arial Narrow',sans-serif;text-transform:uppercase;text-decoration:none}.ds-nav strong{margin-right:auto;font-size:2rem}.ds-nav em{color:var(--blue-bright,#1266f1);font-style:normal}.ds-nav-donate{align-self:stretch;display:grid;place-items:center;padding:0 1.7rem;background:var(--blue,#0756d8);border-left:1px solid var(--amber,#f3a529)}.ds-nav a:hover{color:var(--amber,#f3a529)}.ds-nav-donate:hover{color:#fff!important;background:var(--blue-bright,#1266f1)}.ds-nav a:focus-visible{outline:3px solid var(--amber,#f3a529);outline-offset:4px}"
+    },
+    {
+      "name": "Five-Stage Pathway",
+      "kind": "custom",
+      "description": "The ordered development model rendered as a single active route.",
+      "html": "<ol class=\"ds-pathway\"><li class=\"is-current\">Sport</li><li>Relationship</li><li>Guidance</li><li>Opportunity</li><li>Future</li></ol>",
+      "css": ".ds-pathway{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);margin:0;padding:0 2rem;background:var(--ink,#031325);color:#fcfaf5}.ds-pathway li{min-height:72px;display:grid;place-items:center;border-bottom:1px solid rgba(255,255,255,.72);font:600 1.05rem/1 'Barlow Condensed','Arial Narrow',sans-serif;text-transform:uppercase}.ds-pathway li+li{border-left:1px solid rgba(255,255,255,.35)}.ds-pathway .is-current{color:var(--amber,#f3a529);border-bottom:6px solid var(--amber,#f3a529)}"
+    },
+    {
+      "name": "Advising Dossier",
+      "kind": "custom",
+      "description": "The signature evidence surface for verified planning information.",
+      "html": "<article class=\"ds-dossier\"><small>STUDENT PROFILE</small><h3>Plan + Purpose</h3><ul><li>Basketball development</li><li>Pre-college planning</li><li>Career exploration</li></ul></article>",
+      "css": ".ds-dossier{max-width:420px;padding:2.5rem;background:linear-gradient(rgba(239,211,158,.72),rgba(239,211,158,.72)),url('/textures/manila-paper.png') center/420px;color:var(--ink,#031325);border:1px solid rgba(67,43,12,.28);border-radius:0;box-shadow:-15px 22px 35px rgba(0,0,0,.28);transform:rotate(-1deg)}.ds-dossier small{font:400 .62rem/1 'IBM Plex Mono',monospace;letter-spacing:.08em}.ds-dossier h3{margin:1rem 0;font:600 2.5rem/.95 'Caveat',cursive;color:#123c83}.ds-dossier ul{margin:0;padding-left:1.2rem;font:600 1.15rem/1.35 'Caveat',cursive}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Locker Room → Lecture Hall",
+    "overview": "Riggs HD looks like basketball earned the first conversation and a working advising file carries it forward. The system is direct, documentary, and materially grounded: real gym photography establishes trust while manila stock, taped evidence, ruled forms, and court-line geometry make planning visible. The density is athletic at the edge and editorial in the reading field. Giant compressed statements establish urgency; simple lists and records make the next move legible. Warm physical surfaces overlap the navy field only when they represent guidance, evidence, or a plan.",
+    "keyCharacteristics": [
+      "Real people and real program settings lead every photographic surface.",
+      "Deep navy carries structure, cobalt carries action, and amber carries the active path.",
+      "Square controls, fine rules, condensed display type, and restrained microtype keep the system decisive.",
+      "Paper, tape, whiteboard ink, and soft offset depth appear only where their real-world meaning is clear."
+    ],
+    "rules": [
+      { "name": "The One Path Rule", "body": "Cobalt asks for an action; amber shows where the person is on the path. Do not exchange their jobs.", "section": "colors" },
+      { "name": "The Three Voices Rule", "body": "Every interface uses display, body, and data type. Handwriting is evidence-layer annotation, never body copy or a generic personality effect.", "section": "typography" },
+      { "name": "The Evidence Over Grid Rule", "body": "When content is visual proof, let the photograph or document own the area. Do not reduce real people and program history to repeated thumbnail cards.", "section": "layout" },
+      { "name": "The Material Earns Depth Rule", "body": "A surface receives shadow only when it represents an object that could cast one in the Locker Room → Lecture Hall world.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use source photography of participants, mentors, and real program settings.",
+      "Do connect sport to a visible next step through route lines, ordered records, or a planning surface.",
+      "Do reserve amber for focus, stage, and directional structure.",
+      "Do label past programs and unconfirmed dates plainly."
+    ],
+    "donts": [
+      "Don't invent statistics, partners, testimonials, dates, scholarships, or outcomes.",
+      "Don't build the page from interchangeable rounded icon cards.",
+      "Don't use paper texture, tape, handwriting, or shadow without a real evidence or planning role.",
+      "Don't place decorative labels above headings; headings carry their own hierarchy.",
+      "Don't use hard block shadows, gradient text, Unicode glyph icons, or thick colored side stripes."
+    ]
+  }
+}
