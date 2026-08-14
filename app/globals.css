@@ -58,6 +58,9 @@ h3 { font-size: clamp(1.7rem, 2.5vw, 2.6rem); }
 }
 .wordmark { display: inline-flex; align-items: center; gap: .22em; padding: 0 2.4rem; font-family: var(--display); font-weight: 800; font-size: 2.45rem; letter-spacing: -.04em; line-height: 1; }
 .wordmark-blue { color: var(--blue-bright); }
+.wordmark--header { flex-direction: column; align-items: flex-start; justify-content: center; gap: .22rem; }
+.wordmark__primary { display: inline-flex; gap: .22em; }
+.wordmark__legal { color: rgba(255,255,255,.72); font: 400 .55rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
 .primary-nav { display: flex; align-items: stretch; margin-left: auto; }
 .primary-nav__links { display: flex; align-items: center; gap: clamp(1.3rem, 2.3vw, 3rem); padding: 0 2rem; }
 .primary-nav__links a { position: relative; font-family: var(--display); font-weight: 600; font-size: 1.15rem; text-transform: uppercase; letter-spacing: .025em; }
@@ -157,6 +160,30 @@ h3 { font-size: clamp(1.7rem, 2.5vw, 2.6rem); }
 .home-cta h2 { max-width: 970px; }
 .home-cta__actions { display: flex; gap: 2rem; align-items: center; }
 .home-cta .button-link--text { color: white; }
+
+/* Current program: live opportunity + official application */
+.current-program { color: white; background: var(--ink); border-top: 6px solid var(--amber); }
+.current-program__inner { display: grid; grid-template-columns: 1fr; gap: 3rem; padding-block: 4rem; }
+.current-program__copy { align-self: center; max-width: 720px; }
+.current-program__status { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 3rem; padding-bottom: .85rem; color: var(--amber); border-bottom: 1px solid rgba(255,255,255,.28); font: 400 .65rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.current-program__type { margin-bottom: 1rem; color: #a8c8ff; font: 400 .68rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.current-program h2 { max-width: 700px; margin-bottom: 1.25rem; font-size: clamp(4.4rem, 8vw, 8.5rem); }
+.current-program__tagline { margin-bottom: 1.5rem; color: var(--amber); font: 600 clamp(1.5rem, 2.5vw, 2.2rem)/1.1 var(--display); text-transform: uppercase; }
+.current-program__copy > p:not(.current-program__type, .current-program__tagline) { max-width: 650px; color: #d4dbe3; }
+.current-program__deadline { display: grid; gap: .35rem; margin: 2rem 0; padding: 1.2rem 0; border-block: 1px solid rgba(255,255,255,.25); }
+.current-program__deadline span { color: #a8c8ff; font: 400 .65rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.current-program__deadline strong { color: white; font: 700 clamp(2.1rem, 4vw, 3.8rem)/1 var(--display); text-transform: uppercase; }
+.current-program__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
+.current-program__actions .button-link--text { color: white; }
+.current-program__flyer { position: relative; width: min(100%, 520px); margin: 0 auto; padding: .7rem; background: white; box-shadow: -18px 24px 45px rgba(0,0,0,.38); transform: rotate(1deg); transition: transform .25s ease; }
+.current-program__flyer:hover { transform: rotate(0) translateY(-4px); }
+.current-program__flyer a { display: block; }
+.current-program__flyer img { width: 100%; height: auto; }
+.current-program__flyer figcaption { margin: .7rem .35rem .15rem; color: var(--ink); font: 400 .62rem/1.35 var(--mono); letter-spacing: .04em; text-align: center; text-transform: uppercase; }
+
+@media (min-width: 901px) {
+  .current-program__inner { grid-template-columns: minmax(0, 1fr) minmax(380px, 520px); gap: clamp(4rem, 9vw, 10rem); padding-block: clamp(6rem, 9vw, 9rem); }
+}
 
 /* Shared inner-page hero */
 .page-hero { min-height: 560px; position: relative; display: grid; align-items: center; padding: clamp(5rem, 9vw, 9rem) max(4vw, calc((100vw - 1440px) / 2)); background: var(--ink); color: white; overflow: hidden; }

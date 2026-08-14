@@ -1,12 +1,24 @@
 export const site = {
   name: "Riggs HD",
-  legalName: "Riggs HD / Destined To Be Great",
+  legalName: "Riggs HD Professionals Inc.",
   email: "riggshdpros@gmail.com",
   location: "Illinois, USA",
   donateUrl: "https://givebutter.com/pHmvk5",
   youtube: "https://www.youtube.com/@riggshdprofessionals3016",
   instagram: "https://www.instagram.com/riggshdprosinc/",
   facebook: "https://www.facebook.com/destined2bgreat",
+};
+
+export const currentProgram = {
+  year: "2026",
+  title: "Pathways to Purpose",
+  type: "Career Exploration Program",
+  tagline: "Explore. Grow. Achieve. Get rewarded.",
+  applicationDeadline: "Sunday, September 6",
+  description: "Students explore their interests, strengthen professional skills, and connect their passions to future career goals through a guided program built around growth and follow-through.",
+  reward: "Participants who complete the program activities can earn an Indiana Pacers game experience.",
+  formUrl: "https://forms.gle/FzfSuPugSC7dZY6L9",
+  flyerImage: "/images/original/pathways-to-purpose-2026.webp",
 };
 
 export const navItems = [
@@ -70,10 +82,10 @@ export const programs: Program[] = [
     name: "Career Exploration",
     eyebrow: "Exposure expands the possible",
     summary: "Career conversations and workplace exposure help students connect interests, education, and real paths into professional life.",
-    details: "The prior 2024–25 cohort has closed. Join the interest list for future program updates.",
-    status: "Next cohort to be confirmed",
-    actionLabel: "Join the interest list",
-    actionUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdadqxu3jEIgzZgqVD0XVJpHixsxOT19DAMqxZiRcd83le1YQ/viewform?usp=sf_link",
+    details: "Applications are now open for the 2026 Pathways to Purpose program, a guided career-exploration experience connecting student interests to professional skills and future goals.",
+    status: "2026 applications open through September 6",
+    actionLabel: "Apply for Pathways to Purpose",
+    actionUrl: currentProgram.formUrl,
     image: "/images/original/home-action-3.jpg",
     alt: "Students and mentors gathered at a professional basketball venue",
     marker: "OPPORTUNITY",
@@ -114,7 +126,7 @@ export const pastEvents = [
     date: "2024–25",
     title: "Career Exploration Program",
     type: "Past cohort",
-    copy: "The prior career-exploration cohort connected students to professional possibilities. A future cohort is awaiting confirmation.",
+    copy: "The prior career-exploration cohort connected students to professional possibilities and helped shape the current Pathways to Purpose program.",
     image: "/images/original/home-action-2.jpg",
   },
   {

@@ -15,7 +15,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { assetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
-  title: { default: "Riggs HD | Beyond the Game", template: "%s | Riggs HD" },
+  title: { default: "Riggs HD Professionals Inc. | Beyond the Game", template: "%s | Riggs HD Professionals Inc." },
   description: "Basketball-centered mentorship, education planning, career exploration, and leadership development for young people.",
   keywords: ["youth mentorship", "basketball development", "college planning", "career exploration", "Illinois"],
 };

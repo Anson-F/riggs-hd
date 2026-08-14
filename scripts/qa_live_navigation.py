@@ -9,7 +9,7 @@ from playwright.sync_api import sync_playwright
 BASE_URL = os.getenv("QA_BASE_URL", "https://anson-f.github.io/riggs-hd/").rstrip("/") + "/"
 BASE_PATH = urlparse(BASE_URL).path.rstrip("/")
 ROUTES = ["", "about/", "programs/", "impact/", "events/", "get-involved/", "donate/", "contact/"]
-REVIEW_DIR = Path(".impeccable/review")
+REVIEW_DIR = Path(os.getenv("QA_REVIEW_DIR", ".impeccable/review"))
 REVIEW_DIR.mkdir(parents=True, exist_ok=True)
 
 

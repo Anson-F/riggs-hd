@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { HomeHero } from "@/components/home-hero";
 import { ButtonLink } from "@/components/button-link";
+import { CurrentProgramFeature } from "@/components/current-program-feature";
 import { programs } from "@/data/site";
 import { assetPath, sitePath } from "@/lib/assets";
 
@@ -8,6 +9,8 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
+
+      <CurrentProgramFeature showEventsLink />
 
       <section className="mission-ledger section-shell">
         <div className="mission-ledger__title">

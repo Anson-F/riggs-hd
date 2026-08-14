@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__top">
         <div>
-          <Link className="wordmark wordmark--footer" href="/" aria-label="Riggs HD home"><span>RIGGS</span><span className="wordmark-blue">HD</span></Link>
+          <Link className="wordmark wordmark--footer" href="/" aria-label={`${site.legalName} home`}><span>RIGGS</span><span className="wordmark-blue">HD</span></Link>
           <p>Basketball is the entry point.<br />Holistic development is the mission.</p>
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">

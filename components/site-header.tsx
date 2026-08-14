@@ -18,8 +18,9 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="wordmark" href="/" aria-label="Riggs HD home">
-        <span>RIGGS</span><span className="wordmark-blue">HD</span>
+      <Link className="wordmark wordmark--header" href="/" aria-label={`${site.legalName} home`}>
+        <span className="wordmark__primary"><span>RIGGS</span><span className="wordmark-blue">HD</span></span>
+        <span className="wordmark__legal">Professionals Inc.</span>
       </Link>
 
       <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}>
