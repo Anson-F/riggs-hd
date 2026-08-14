@@ -1,5 +1,6 @@
 import { ButtonLink } from "./button-link";
 import { Pathway } from "./pathway";
+import { assetPath } from "@/lib/assets";
 
 export function HomeHero() {
   return (
@@ -34,7 +35,7 @@ export function HomeHero() {
             <span>ACADEMICS</span><span>LEADERSHIP</span><span>OPPORTUNITIES</span><span>NEXT STEPS</span>
           </div>
           <figure className="profile-photo taped-photo">
-            <img src="/images/original/founder-profile.jpeg" alt="Coach Terry TJ Riggs in professional attire" />
+            <img src={assetPath("/images/original/founder-profile.jpeg")} alt="Coach Terry TJ Riggs in professional attire" />
           </figure>
           <div className="profile-note">
             <p><span>MENTOR:</span>Coach Riggs</p>

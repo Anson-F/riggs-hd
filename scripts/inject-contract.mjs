@@ -30,4 +30,5 @@ for (const file of htmlFiles(outputRoot)) {
   fs.writeFileSync(file, `${html.slice(0, bodyEnd + 1)}${contract}${html.slice(bodyEnd + 1)}`);
 }
 
+fs.writeFileSync(path.join(outputRoot, ".nojekyll"), "");
 console.log(`Injected direction contract into ${htmlFiles(outputRoot).length} exported pages.`);

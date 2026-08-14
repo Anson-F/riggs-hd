@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Pathway } from "./pathway";
+import { assetPath } from "@/lib/assets";
 
 type PageHeroProps = {
   label: string;
@@ -21,7 +22,7 @@ export function PageHero({ label, title, intro, image, imageAlt = "", marker = "
         </div>
         {image && (
           <figure className="page-hero__photo taped-photo">
-            <img src={image} alt={imageAlt} />
+            <img src={assetPath(image)} alt={imageAlt} />
             <figcaption>{marker}</figcaption>
           </figure>
         )}

@@ -1,7 +1,8 @@
+import os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
-BASE_URL = "http://127.0.0.1:3100"
+BASE_URL = os.getenv("QA_BASE_URL", "http://127.0.0.1:3100").rstrip("/")
 ROUTES = ["/", "/about/", "/programs/", "/impact/", "/events/", "/get-involved/", "/donate/", "/contact/"]
 REVIEW_DIR = Path(".impeccable/review")
 REVIEW_DIR.mkdir(parents=True, exist_ok=True)

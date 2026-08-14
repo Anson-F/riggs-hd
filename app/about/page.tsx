@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink } from "@/components/button-link";
 import { values } from "@/data/site";
+import { assetPath } from "@/lib/assets";
 
 export const metadata: Metadata = { title: "About", description: "Meet Terry TJ Riggs and learn how lived experience shaped the Riggs HD model." };
 
@@ -22,7 +23,7 @@ export default function AboutPage() {
       </section>
 
       <section className="belief-statement">
-        <div className="belief-statement__photo"><img src="/images/original/founder-graduation.jpg" alt="A graduation group celebrating an educational milestone" /></div>
+        <div className="belief-statement__photo"><img src={assetPath("/images/original/founder-graduation.jpg")} alt="A graduation group celebrating an educational milestone" /></div>
         <blockquote>“A player should leave with more than a better game. They should leave with a stronger sense of who they are becoming.”</blockquote>
       </section>
 

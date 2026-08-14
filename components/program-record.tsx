@@ -1,13 +1,14 @@
 import { CircleCheck } from "lucide-react";
 import type { Program } from "@/data/site";
 import { ButtonLink } from "./button-link";
+import { assetPath } from "@/lib/assets";
 
 export function ProgramRecord({ program }: { program: Program }) {
   return (
     <article className="program-record" id={program.id}>
       <div className="program-record__index" aria-hidden="true">{program.index}</div>
       <div className="program-record__photo">
-        <img src={program.image} alt={program.alt} />
+        <img src={assetPath(program.image)} alt={program.alt} />
         <span>{program.marker}</span>
       </div>
       <div className="program-record__copy">

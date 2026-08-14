@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { ButtonLink } from "@/components/button-link";
 import { pastEvents } from "@/data/site";
+import { assetPath } from "@/lib/assets";
 
 export const metadata: Metadata = { title: "Events", description: "Review past Riggs HD programs and connect for future event announcements." };
 
@@ -15,7 +16,7 @@ export default function EventsPage() {
         {pastEvents.map((event, index) => (
           <article className="event-record" key={event.title}>
             <div className="event-record__date"><span>{String(index + 1).padStart(2, "0")}</span><p>{event.date}</p></div>
-            <div className="event-record__image"><img src={event.image} alt="" /></div>
+            <div className="event-record__image"><img src={assetPath(event.image)} alt="" /></div>
             <div className="event-record__copy"><p className="status-label">{event.type}</p><h3>{event.title}</h3><p>{event.copy}</p></div>
           </article>
         ))}

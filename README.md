@@ -2,6 +2,12 @@
 
 An independent, static-export-ready rebuild of the Riggs HD / Destined To Be Great website.
 
+## Live site
+
+[https://anson-f.github.io/riggs-hd/](https://anson-f.github.io/riggs-hd/)
+
+Every push to `main` builds the static export and deploys it through the GitHub Pages workflow in `.github/workflows/deploy-pages.yml`.
+
 ## Design philosophy
 
 **Layered Dossier: Locker Room → Lecture Hall.** Basketball earns attention; the advising file reveals the larger mission. The interface combines gym photography, court-line geometry, warm manila surfaces, taped field evidence, and direct athletic typography. It avoids generic nonprofit card grids and keeps every program status explicit.

@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { HomeHero } from "@/components/home-hero";
 import { ButtonLink } from "@/components/button-link";
 import { programs } from "@/data/site";
+import { assetPath } from "@/lib/assets";
 
 export default function HomePage() {
   return (
@@ -45,7 +46,7 @@ export default function HomePage() {
       </section>
 
       <section className="field-story">
-        <div className="field-story__image"><img src="/images/original/project-10.jpg" alt="Young people standing together on a basketball court" /></div>
+        <div className="field-story__image"><img src={assetPath("/images/original/project-10.jpg")} alt="Young people standing together on a basketball court" /></div>
         <div className="field-story__paper">
           <p className="impact-number">30<span>+</span></p>
           <h2>Students and entrepreneurs helped so far.</h2>
@@ -55,7 +56,7 @@ export default function HomePage() {
       </section>
 
       <section className="founder-bridge section-shell">
-        <div className="founder-bridge__photo taped-photo"><img src="/images/original/founder-profile.jpeg" alt="Coach Terry TJ Riggs" /></div>
+        <div className="founder-bridge__photo taped-photo"><img src={assetPath("/images/original/founder-profile.jpeg")} alt="Coach Terry TJ Riggs" /></div>
         <div className="founder-bridge__copy">
           <h2>Experience made the method personal.</h2>
           <p>As a scholarship student-athlete, Terry “TJ” Riggs experienced both the possibility sport can create and the difficult identity transition that can follow injury. His work connects the court to education, mental wellbeing, and a future young people can name for themselves.</p>
