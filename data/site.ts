@@ -3,7 +3,7 @@ export const site = {
   legalName: "Riggs HD Professionals Inc.",
   email: "riggshdpros@gmail.com",
   location: "Illinois, USA",
-  donateUrl: "https://givebutter.com/pHmvk5",
+  donateUrl: "https://givebutter.com/2025-26-career-exploration-and-sponsorship-copy-wjza1h",
   youtube: "https://www.youtube.com/@riggshdprofessionals3016",
   instagram: "https://www.instagram.com/riggshdprosinc/",
   facebook: "https://www.facebook.com/destined2bgreat",
