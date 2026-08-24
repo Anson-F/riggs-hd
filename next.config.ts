@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "riggs-hd";
 const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const basePath = isGitHubPages ? `/${repositoryName}` : "";
+const hasCustomDomain = Boolean(process.env.PAGES_CUSTOM_DOMAIN);
+const basePath = isGitHubPages && !hasCustomDomain ? `/${repositoryName}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",

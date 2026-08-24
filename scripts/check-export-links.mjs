@@ -3,7 +3,8 @@ import path from "node:path";
 
 const outputDirectory = path.resolve("out");
 const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "riggs-hd";
-const basePath = `/${repositoryName}`;
+const hasCustomDomain = Boolean(process.env.PAGES_CUSTOM_DOMAIN);
+const basePath = hasCustomDomain ? "" : `/${repositoryName}`;
 const failures = [];
 
 async function htmlFiles(directory) {
@@ -27,16 +28,26 @@ for (const file of await htmlFiles(outputDirectory)) {
     const href = match[1];
     const isRootRelative = href.startsWith("/") && !href.startsWith("//");
     const staysInsideProject = href === basePath || href.startsWith(`${basePath}/`);
-    if (isRootRelative && !staysInsideProject) {
+    const keepsLegacyProjectPath =
+      hasCustomDomain && (href === `/${repositoryName}` || href.startsWith(`/${repositoryName}/`));
+    if (isRootRelative && ((!hasCustomDomain && !staysInsideProject) || keepsLegacyProjectPath)) {
       failures.push(`${path.relative(outputDirectory, file)}: ${href}`);
     }
   }
 }
 
 if (failures.length) {
-  console.error("Export contains links that escape the GitHub Pages project path:");
+  console.error(
+    hasCustomDomain
+      ? "Export contains links that retain the legacy GitHub Pages project path:"
+      : "Export contains links that escape the GitHub Pages project path:",
+  );
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
-console.log(`Export link check passed: every root-relative anchor stays inside ${basePath}/.`);
+console.log(
+  hasCustomDomain
+    ? "Export link check passed: every root-relative anchor targets the custom-domain root."
+    : `Export link check passed: every root-relative anchor stays inside ${basePath}/.`,
+);

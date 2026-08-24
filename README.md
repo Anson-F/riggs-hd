@@ -4,7 +4,7 @@ An independent, static-export-ready rebuild of the Riggs HD / Destined To Be Gre
 
 ## Live site
 
-[https://anson-f.github.io/riggs-hd/](https://anson-f.github.io/riggs-hd/)
+[https://riggshdprosinc.org/](https://riggshdprosinc.org/)
 
 Every push to `main` builds the static export and deploys it through the GitHub Pages workflow in `.github/workflows/deploy-pages.yml`.
 

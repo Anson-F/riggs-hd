@@ -6,7 +6,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 
-BASE_URL = os.getenv("QA_BASE_URL", "https://anson-f.github.io/riggs-hd/").rstrip("/") + "/"
+BASE_URL = os.getenv("QA_BASE_URL", "https://riggshdprosinc.org/").rstrip("/") + "/"
 BASE_PATH = urlparse(BASE_URL).path.rstrip("/")
 ROUTES = ["", "about/", "programs/", "impact/", "events/", "get-involved/", "donate/", "contact/"]
 REVIEW_DIR = Path(os.getenv("QA_REVIEW_DIR", ".impeccable/review"))
@@ -113,5 +113,5 @@ if failures:
 
 print(
     f"LIVE NAVIGATION PASSED: {len(ROUTES)} direct routes and "
-    f"{len(link_cases)} unique same-origin links clicked inside {BASE_PATH}/."
+    f"{len(link_cases)} unique same-origin links clicked inside {BASE_PATH or '/'}."
 )
