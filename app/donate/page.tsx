@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { ArrowDown, Check } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
-import { site } from "@/data/site";
+import { donationCampaign, site } from "@/data/site";
+import { assetPath } from "@/lib/assets";
 
 export const metadata: Metadata = { title: "Donate", description: "Support Riggs HD youth mentorship, education planning, and career exposure." };
 
@@ -13,6 +14,22 @@ export default function DonatePage() {
       <section className="donation-sheet section-shell">
         <div className="donation-sheet__copy"><h2>The infrastructure around potential.</h2><p>Riggs HD’s public giving page processes donations securely through Givebutter. The button below opens that page in a new tab.</p><ButtonLink href={site.donateUrl} tone="blue">Donate securely</ButtonLink><a className="down-link" href="#giving-note"><ArrowDown aria-hidden="true" />Before you give</a></div>
         <ul className="donation-sheet__uses"><li><Check aria-hidden="true" />Mentoring and student guidance</li><li><Check aria-hidden="true" />Basketball and development programming</li><li><Check aria-hidden="true" />Education and career exposure</li><li><Check aria-hidden="true" />Program materials and access</li></ul>
+      </section>
+      <section className="donation-campaign" aria-labelledby="donation-campaign-title">
+        <div className="donation-campaign__inner section-shell">
+          <div className="donation-campaign__copy">
+            <p className="status-label">Current giving opportunity</p>
+            <h2 id="donation-campaign-title">Help us reach our {donationCampaign.goal} goal.</h2>
+            <p>The current sponsorship guide shows giving levels from $50 to $1,000 and how each contribution supports student materials, leadership development, career exploration, mentorship, and program access.</p>
+            <ButtonLink href={site.donateUrl} tone="blue">Give through Givebutter</ButtonLink>
+          </div>
+          <figure className="donation-campaign__flyer">
+            <a href={site.donateUrl} target="_blank" rel="noreferrer" aria-label={`Donate to the ${donationCampaign.title} campaign through Givebutter (opens in a new tab)`}>
+              <img src={assetPath(donationCampaign.flyerImage)} width="1080" height="1350" alt="Riggs HD Pathways to Purpose donation flyer listing a $6,000 goal and sponsorship levels of $50, $100, $200, $500, and $1,000" />
+            </a>
+            <figcaption>Tap the flyer or button to donate securely through Givebutter.</figcaption>
+          </figure>
+        </div>
       </section>
       <section className="giving-note section-shell" id="giving-note"><h2>2025–26 Career Exploration &amp; Sponsorship.</h2><p>This is the current donation campaign provided by Riggs HD Professionals Inc. Givebutter displays the latest campaign details and securely processes the contribution. Questions can be sent directly to <a href={`mailto:${site.email}`}>{site.email}</a>.</p></section>
       <section className="home-cta"><h2>Access can be as valuable as funding.</h2><div className="home-cta__actions"><ButtonLink href="/get-involved" tone="paper">Explore other roles</ButtonLink><ButtonLink href="/contact" tone="text">Offer a partnership</ButtonLink></div></section>

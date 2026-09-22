@@ -14,11 +14,17 @@ export const currentProgram = {
   title: "Pathways to Purpose",
   type: "Career Exploration Program",
   tagline: "Explore. Grow. Achieve. Get rewarded.",
-  applicationDeadline: "Sunday, September 6",
+  applicationDeadline: "Saturday, September 26",
   description: "Students explore their interests, strengthen professional skills, and connect their passions to future career goals through a guided program built around growth and follow-through.",
   reward: "Participants who complete the program activities can earn an Indiana Pacers game experience.",
   formUrl: "https://forms.gle/FzfSuPugSC7dZY6L9",
   flyerImage: "/images/original/pathways-to-purpose-2026.webp",
+};
+
+export const donationCampaign = {
+  title: "Pathways to Purpose Career Exploration & Leadership Program",
+  goal: "$6,000",
+  flyerImage: "/images/original/givebutter-sponsorship-2025-26.webp",
 };
 
 export const navItems = [
@@ -83,7 +89,7 @@ export const programs: Program[] = [
     eyebrow: "Exposure expands the possible",
     summary: "Career conversations and workplace exposure help students connect interests, education, and real paths into professional life.",
     details: "Applications are now open for the 2026 Pathways to Purpose program, a guided career-exploration experience connecting student interests to professional skills and future goals.",
-    status: "2026 applications open through September 6",
+    status: "2026 applications open through September 26",
     actionLabel: "Apply for Pathways to Purpose",
     actionUrl: currentProgram.formUrl,
     image: "/images/original/home-action-3.jpg",

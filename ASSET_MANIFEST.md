@@ -19,6 +19,8 @@ Inline asset-producer substitution: this manifest follows the Impeccable degrade
 | `pacers-visit` | Wix original | `public/images/original/home-action-3.jpg` | ship supplied program/event photo | 1170×779 | JPEG | opaque | none | accepted |
 | `graduation` | Wix original | `public/images/original/founder-graduation.jpg` | ship supplied education photo | 1170×977 | JPEG | opaque | none | accepted |
 | `program-reel` | Wix original | `public/videos/original/program-reel.mp4` | lazy-loaded native video with poster and controls | 1080p source | MP4 | opaque | none | accepted |
+| `pathways-purpose-flyer-2026` | TJ-supplied current program flyer | `public/images/original/pathways-to-purpose-2026.webp` | loss-aware WebP conversion for responsive web delivery | 1024×1536 | WebP | opaque | converted from JPEG; content unchanged | accepted |
+| `givebutter-sponsorship-flyer-2025-26` | TJ-supplied current donation flyer | `public/images/original/givebutter-sponsorship-2025-26.webp` | loss-aware WebP conversion for responsive web delivery | 1080×1350 | WebP | opaque | converted from JPEG; content unchanged | accepted |
 
 ## Semantic
 

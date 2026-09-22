@@ -290,6 +290,17 @@ h3 { font-size: clamp(1.7rem, 2.5vw, 2.6rem); }
 .donation-sheet__uses { align-self: center; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
 .donation-sheet__uses li { display: flex; align-items: center; gap: 1rem; padding: 1.4rem 0; border-bottom: 1px solid var(--ink); font: 600 1.55rem/1.2 var(--display); text-transform: uppercase; }
 .donation-sheet__uses svg { color: var(--blue); }
+.donation-campaign { color: white; background: var(--ink); border-block: 6px solid var(--amber); }
+.donation-campaign__inner { display: grid; grid-template-columns: minmax(280px, .7fr) minmax(420px, 1fr); align-items: center; gap: clamp(4rem, 8vw, 9rem); padding-block: clamp(6rem, 9vw, 9rem); }
+.donation-campaign__copy { max-width: 620px; }
+.donation-campaign__copy .status-label { color: var(--amber); }
+.donation-campaign__copy h2 { margin: 1rem 0 1.5rem; font-size: clamp(4rem, 6.5vw, 7rem); }
+.donation-campaign__copy > p:not(.status-label) { margin-bottom: 2rem; color: #d4dbe3; font-size: 1.18rem; }
+.donation-campaign__flyer { width: min(100%, 680px); margin: 0 auto; padding: .7rem; background: white; box-shadow: -18px 24px 45px rgba(0,0,0,.38); transform: rotate(1deg); transition: transform .25s ease; }
+.donation-campaign__flyer:hover { transform: rotate(0) translateY(-4px); }
+.donation-campaign__flyer a { display: block; }
+.donation-campaign__flyer img { width: 100%; height: auto; }
+.donation-campaign__flyer figcaption { margin: .7rem .35rem .15rem; color: var(--ink); font: 400 .62rem/1.35 var(--mono); letter-spacing: .04em; text-align: center; text-transform: uppercase; }
 .giving-note { margin-bottom: 8rem; padding: clamp(3rem, 6vw, 6rem); background: var(--paper); border-top: 4px solid var(--amber); }
 .giving-note h2 { font-size: clamp(3rem, 5vw, 5rem); }
 .giving-note a { color: var(--blue); text-decoration: underline; text-underline-offset: .2em; }
@@ -391,6 +402,7 @@ h3 { font-size: clamp(1.7rem, 2.5vw, 2.6rem); }
   .partner-note { grid-template-columns: 1fr; padding-block: 4rem; }
   .partner-note__paper { margin: 0 8vw; }
   .partner-note__copy { padding: 5rem 8vw 1rem; }
+  .donation-campaign__inner { grid-template-columns: 1fr; }
   .site-footer__top { grid-template-columns: 1fr 1fr; }
   .footer-contact { grid-column: 2; }
 }
@@ -473,6 +485,9 @@ h3 { font-size: clamp(1.7rem, 2.5vw, 2.6rem); }
   .partner-note__paper { margin-inline: 1rem; padding: 2.5rem 1.5rem; }
   .partner-note__copy { padding: 4rem 1rem 0; }
   .donation-sheet { padding-block: 5rem; }
+  .donation-campaign__inner { gap: 3rem; padding-block: 5rem; }
+  .donation-campaign__copy h2 { font-size: 4rem; }
+  .donation-campaign__flyer { width: 100%; }
   .giving-note { margin-bottom: 4rem; padding: 2.5rem 1.5rem; }
   .contact-layout { padding-block: 5rem; }
   .field-row { grid-template-columns: 1fr; }

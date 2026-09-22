@@ -28,7 +28,7 @@ export function CurrentProgramFeature({ showEventsLink = false }: { showEventsLi
 
         <figure className="current-program__flyer">
           <a href={currentProgram.formUrl} target="_blank" rel="noreferrer" aria-label={`Apply for ${currentProgram.title} (opens in a new tab)`}>
-            <img src={assetPath(currentProgram.flyerImage)} width="1024" height="1536" alt="Pathways to Purpose Career Exploration Program flyer with a September 6 application deadline and Indiana Pacers experience reward" />
+            <img src={assetPath(currentProgram.flyerImage)} width="1024" height="1536" alt="Pathways to Purpose Career Exploration Program flyer with a September 26 application deadline, signup QR code, and Indiana Pacers experience reward" />
           </a>
           <figcaption>Tap the flyer or application button to apply.</figcaption>
         </figure>

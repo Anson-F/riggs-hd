@@ -43,13 +43,17 @@ with sync_playwright() as p:
             flyer = desktop.locator('img[src*="pathways-to-purpose-2026.webp"]')
             if flyer.count() != 1 or not flyer.first.is_visible():
                 failures.append(f"{route}: current program flyer is missing or not visible")
-        expected_donation_links = 2 if route == "/donate/" else 1
+        expected_donation_links = 4 if route == "/donate/" else 1
         actual_donation_links = desktop.locator(f'a[href="{DONATION_URL}"]').count()
         if actual_donation_links != expected_donation_links:
             failures.append(
                 f"{route}: expected {expected_donation_links} current donation links, "
                 f"found {actual_donation_links}"
             )
+        if route == "/donate/":
+            donation_flyer = desktop.locator('img[src*="givebutter-sponsorship-2025-26.webp"]')
+            if donation_flyer.count() != 1 or not donation_flyer.first.is_visible():
+                failures.append("/donate/: current sponsorship flyer is missing or not visible")
         overflow = desktop.evaluate("document.documentElement.scrollWidth - window.innerWidth")
         if overflow > 2:
             culprits = desktop.evaluate("""Array.from(document.querySelectorAll('*')).map(el => ({tag: el.tagName, cls: el.className || '', right: el.getBoundingClientRect().right, width: el.getBoundingClientRect().width})).filter(x => x.right > window.innerWidth + 2).slice(0, 8)""")
@@ -71,6 +75,7 @@ with sync_playwright() as p:
     application_page.close()
 
     desktop.goto(f"{BASE_URL}/donate/", wait_until="networkidle")
+    desktop.screenshot(path=str(REVIEW_DIR / "desktop-donate-full.png"), full_page=True)
     with desktop.expect_popup() as donation_popup_info:
         desktop.get_by_role("link", name="Donate securely").click()
     donation_page = donation_popup_info.value
@@ -112,6 +117,15 @@ with sync_playwright() as p:
     if mobile_overflow > 2:
         failures.append(f"mobile contact: horizontal overflow {mobile_overflow}px")
 
+    mobile.goto(f"{BASE_URL}/donate/", wait_until="networkidle")
+    mobile.screenshot(path=str(REVIEW_DIR / "mobile-donate-full.png"), full_page=True)
+    mobile_donation_flyer = mobile.locator('img[src*="givebutter-sponsorship-2025-26.webp"]')
+    if mobile_donation_flyer.count() != 1 or not mobile_donation_flyer.first.is_visible():
+        failures.append("mobile donate: sponsorship flyer is missing or not visible")
+    mobile_donate_overflow = mobile.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+    if mobile_donate_overflow > 2:
+        failures.append(f"mobile donate: horizontal overflow {mobile_donate_overflow}px")
+
     desktop.goto(BASE_URL, wait_until="networkidle")
     donate_href = desktop.locator("a.nav-donate").get_attribute("href")
     if donate_href != DONATION_URL:
@@ -130,5 +144,5 @@ if failures:
 
 print(
     f"QA PASSED: {len(ROUTES)} routes; desktop/tablet/mobile layouts; full organization name; "
-    "current flyer, Google application, current Givebutter campaign; images and form labels."
+    "current program and sponsorship flyers, Google application, current Givebutter campaign; images and form labels."
 )
