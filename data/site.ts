@@ -1,6 +1,7 @@
 export const site = {
   name: "Riggs HD",
   legalName: "Riggs HD Professionals Inc.",
+  logoImage: "/images/original/riggs-hd-professionals-logo.png",
   email: "riggshdpros@gmail.com",
   location: "Illinois, USA",
   donateUrl: "https://givebutter.com/2025-26-career-exploration-and-sponsorship-copy-wjza1h",

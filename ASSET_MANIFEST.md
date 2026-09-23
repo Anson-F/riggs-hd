@@ -21,12 +21,13 @@ Inline asset-producer substitution: this manifest follows the Impeccable degrade
 | `program-reel` | Wix original | `public/videos/original/program-reel.mp4` | lazy-loaded native video with poster and controls | 1080p source | MP4 | opaque | none | accepted |
 | `pathways-purpose-flyer-2026` | TJ-supplied current program flyer | `public/images/original/pathways-to-purpose-2026.webp` | loss-aware WebP conversion for responsive web delivery | 1024×1536 | WebP | opaque | converted from JPEG; content unchanged | accepted |
 | `givebutter-sponsorship-flyer-2025-26` | TJ-supplied current donation flyer | `public/images/original/givebutter-sponsorship-2025-26.webp` | loss-aware WebP conversion for responsive web delivery | 1080×1350 | WebP | opaque | converted from JPEG; content unchanged | accepted |
+| `riggs-hd-professionals-logo` | TJ-supplied official logo | `public/images/original/riggs-hd-professionals-logo.png` | lossless PNG optimization; used in header, footer, and browser icon metadata | 938×945 | PNG | opaque | file metadata removed; visual artwork unchanged | accepted |
 
 ## Semantic
 
 | id | implementation | notes | qa_status |
 |---|---|---|---|
-| `global-nav` | `SiteHeader`: semantic `header/nav`, route links, button, authored menu SVG, responsive drawer | No raster chrome | accepted |
+| `global-nav` | `SiteHeader`: semantic `header/nav`, TJ-supplied official logo, route links, button, authored menu SVG, responsive drawer | Logo link retains the full organization name as its accessible label | accepted |
 | `hero-copy` | semantic `h1`, paragraph, and action links over the source photograph | Copy remains selectable and responsive | accepted |
 | `court-path` | authored SVG path plus CSS current-stage segments; ordered-list fallback | Reduced-motion mode keeps final path visible | accepted |
 | `dossier` | layered semantic sections using the paper texture; CSS clip-path tabs, soft shadow, and physical seams | No screenshot crop | accepted |

@@ -6,6 +6,7 @@ from playwright.sync_api import sync_playwright
 BASE_URL = os.getenv("QA_BASE_URL", "http://127.0.0.1:3100").rstrip("/")
 APPLICATION_URL = "https://forms.gle/FzfSuPugSC7dZY6L9"
 DONATION_URL = "https://givebutter.com/2025-26-career-exploration-and-sponsorship-copy-wjza1h"
+LOGO_IMAGE = "riggs-hd-professionals-logo.png"
 APPLICATION_LINK_COUNTS = {"/": 2, "/programs/": 1, "/events/": 2}
 ROUTES = ["/", "/about/", "/programs/", "/impact/", "/events/", "/get-involved/", "/donate/", "/contact/"]
 REVIEW_DIR = Path(os.getenv("QA_REVIEW_DIR", ".impeccable/review"))
@@ -29,9 +30,13 @@ with sync_playwright() as p:
             failures.append(f"{route}: expected exactly one main h1")
         if desktop.locator("main").count() != 1:
             failures.append(f"{route}: missing main landmark")
-        header_text = " ".join(desktop.locator("header").inner_text().split())
-        if "RIGGS HD PROFESSIONALS INC." not in header_text.upper():
-            failures.append(f"{route}: full organization name missing from header")
+        header_home = desktop.locator('header a[aria-label="Riggs HD Professionals Inc. home"]')
+        header_logo = header_home.locator(f'img[src*="{LOGO_IMAGE}"]')
+        if header_home.count() != 1 or header_logo.count() != 1 or not header_logo.first.is_visible():
+            failures.append(f"{route}: official organization logo is missing or not visible in the header")
+        footer_logo = desktop.locator(f'footer img[src*="{LOGO_IMAGE}"]')
+        if footer_logo.count() != 1 or not footer_logo.first.is_visible():
+            failures.append(f"{route}: official organization logo is missing or not visible in the footer")
         expected_application_links = APPLICATION_LINK_COUNTS.get(route, 0)
         actual_application_links = desktop.locator(f'a[href="{APPLICATION_URL}"]').count()
         if actual_application_links != expected_application_links:
@@ -100,6 +105,9 @@ with sync_playwright() as p:
     mobile_home_overflow = mobile.evaluate("document.documentElement.scrollWidth - window.innerWidth")
     if mobile_home_overflow > 2:
         failures.append(f"mobile home: horizontal overflow {mobile_home_overflow}px")
+    mobile_header_logo = mobile.locator(f'header img[src*="{LOGO_IMAGE}"]')
+    if mobile_header_logo.count() != 1 or not mobile_header_logo.first.is_visible():
+        failures.append("mobile home: official organization logo is missing or not visible")
     mobile.get_by_role("button", name="Open menu").click()
     primary_contact = mobile.get_by_label("Primary navigation").get_by_role("link", name="Contact", exact=True)
     if not primary_contact.is_visible():
@@ -143,6 +151,6 @@ if failures:
     raise SystemExit(1)
 
 print(
-    f"QA PASSED: {len(ROUTES)} routes; desktop/tablet/mobile layouts; full organization name; "
+    f"QA PASSED: {len(ROUTES)} routes; desktop/tablet/mobile layouts; official organization logo; "
     "current program and sponsorship flyers, Google application, current Givebutter campaign; images and form labels."
 )

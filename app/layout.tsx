@@ -12,12 +12,18 @@ import "@fontsource/caveat/600.css";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { site } from "@/data/site";
 import { assetPath } from "@/lib/assets";
 
 export const metadata: Metadata = {
   title: { default: "Riggs HD Professionals Inc. | Beyond the Game", template: "%s | Riggs HD Professionals Inc." },
   description: "Basketball-centered mentorship, education planning, career exploration, and leadership development for young people.",
   keywords: ["youth mentorship", "basketball development", "college planning", "career exploration", "Illinois"],
+  icons: {
+    icon: assetPath(site.logoImage),
+    shortcut: assetPath(site.logoImage),
+    apple: assetPath(site.logoImage),
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

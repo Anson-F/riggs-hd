@@ -1,13 +1,16 @@
 import Link from "next/link";
 import { Camera, Play, Users } from "lucide-react";
 import { navItems, site } from "@/data/site";
+import { assetPath } from "@/lib/assets";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="site-footer__top">
         <div>
-          <Link className="wordmark wordmark--footer" href="/" aria-label={`${site.legalName} home`}><span>RIGGS</span><span className="wordmark-blue">HD</span></Link>
+          <Link className="brand-logo-link brand-logo-link--footer" href="/" aria-label={`${site.legalName} home`}>
+            <img className="brand-logo brand-logo--footer" src={assetPath(site.logoImage)} alt="" aria-hidden="true" />
+          </Link>
           <p>Basketball is the entry point.<br />Holistic development is the mission.</p>
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">
